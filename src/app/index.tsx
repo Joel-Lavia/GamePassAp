@@ -31,7 +31,7 @@ function getDevMenuHint() {
 export default function HomeScreen() {
   return (
     <ThemedView style={styles.container}>
-      <SafeAreaView style={styles.safeArea}>
+      {/* <SafeAreaView style={styles.safeArea}>
         <ThemedView style={styles.heroSection}>
           <AnimatedIcon />
           <ThemedText type="title" style={styles.title}>
@@ -41,6 +41,7 @@ export default function HomeScreen() {
 
         <ThemedText type="code" style={styles.code}>
           get started
+          Hello world
         </ThemedText>
 
         <ThemedView type="backgroundElement" style={styles.stepContainer}>
@@ -56,7 +57,7 @@ export default function HomeScreen() {
         </ThemedView>
 
         {Platform.OS === 'web' && <WebBadge />}
-      </SafeAreaView>
+      </SafeAreaView> */}
     </ThemedView>
   );
 }
