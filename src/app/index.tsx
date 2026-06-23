@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 export default function Index() {
   return (
     <View style={styles.container}>
-      <Text>Bonjours le monde.</Text>
+      <Text style={styles.text}>Bonjours le monde.</Text>
     </View>
   );
 }
@@ -11,7 +11,11 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "#0c0754",
     alignItems: "center",
     justifyContent: "center",
+  },
+  text: {
+    color: "#16dc3a",
   },
 });
