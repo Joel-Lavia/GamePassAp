@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 
 export const api = axios.create({
   baseURL: process.env.EXPO_PUBLIC_API_URL,
@@ -8,3 +8,11 @@ export const api = axios.create({
     Accept: "application/json",
   },
 });
+
+api.interceptors.response.use(
+  (response) => response,
+
+  (error: AxiosError) => {
+    return Promise.reject(error);
+  },
+);
