@@ -1,0 +1,10 @@
+import axios from "axios";
+
+export const api = axios.create({
+  baseURL: process.env.EXPO_PUBLIC_API_URL,
+  timeout: 5000,
+  headers: {
+    // "Content-Type": "multipart/form-data",
+    Accept: "application/json",
+  },
+});
