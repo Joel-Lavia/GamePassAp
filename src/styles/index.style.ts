@@ -14,8 +14,8 @@ export const styles = StyleSheet.create({
 export const styleMonstRaking = StyleSheet.create({
   container: {
     // flex: 1,
-    marginBottom: 50,
-    padding: 20,
+    // marginBottom: 50,
+    // padding: 20,
     width:"100%"
   },
 });
