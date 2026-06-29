@@ -1,17 +1,12 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Home } from "@/components/Home";
+import { Text, View } from "react-native";
+import { useGetListgames } from "../hooks/useGetListGame";
+import { styles } from "../styles/index.style";
 
 export default function Index() {
   return (
     <View style={styles.container}>
-      <Text>Bonjours le monde.</Text>
+      <Home />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
