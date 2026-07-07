@@ -17,7 +17,7 @@ export function MostRaking(): JSX.Element {
         style={{ width: "auto", height: 160 }}
       />
       <Text style={defaultStyle.title}>{mostVies?.title}</Text>
-      <Text style={defaultStyle.title}>{mostVies?.description}</Text>
+      <Text style={defaultStyle.text}>{mostVies?.description}</Text>
       <View style={defaultStyle.flex}>
         <Text>
           <StarsIcone />
