@@ -16,7 +16,7 @@ export const styleMonstRaking = StyleSheet.create({
     // flex: 1,
     // marginBottom: 50,
     // padding: 20,
-    width:"100%"
+    width: "100%",
   },
 });
 export const defaultStyle = StyleSheet.create({
@@ -30,6 +30,18 @@ export const defaultStyle = StyleSheet.create({
   },
   raking: {
     color: "#fbcd40",
-    fontSize: 12,
+    fontSize: 15,
+  },
+  flex: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    // alignItems: "center",
+  },
+  iconContainer: {
+    backgroundColor: "yellow", // Couleur de l'arrière-plan
+    padding: 6, // Espace entre l'icône et le bord du fond
+    borderRadius: 50, // Rend le fond parfaitement rond
+    alignItems: "center", // Centre l'icône horizontalement
+    justifyContent: "center", // Centre l'icône verticalement
   },
 });

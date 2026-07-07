@@ -1,4 +1,5 @@
 import { useGetListgames } from "@/hooks/useGetListGame";
+import StarsIcone from "@/icons/icons";
 import { defaultStyle, styleMonstRaking } from "@/styles/index.style";
 import { Image, Text, View } from "react-native";
 import { JSX } from "react/jsx-runtime";
@@ -13,11 +14,16 @@ export function MostRaking(): JSX.Element {
     <View style={styleMonstRaking.container}>
       <Image
         source={{ uri: mostVies?.imageUrl }}
-        style={{ width:"auto", height: 160 }}
+        style={{ width: "auto", height: 160 }}
       />
-      <Text style={defaultStyle.text}>{mostVies?.title}</Text>
-      <Text style={defaultStyle.text}>{mostVies?.description}</Text>
-      <Text style={defaultStyle.raking}>{mostVies?.rating}/100</Text>
+      <Text style={defaultStyle.title}>{mostVies?.title}</Text>
+      <Text style={defaultStyle.title}>{mostVies?.description}</Text>
+      <View style={defaultStyle.flex}>
+        <Text>
+          <StarsIcone />
+        </Text>
+        <Text style={defaultStyle.raking}>{mostVies?.rating}/100</Text>
+      </View>
     </View>
   );
 }
