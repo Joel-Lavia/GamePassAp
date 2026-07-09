@@ -57,3 +57,17 @@ export const topRatedGames = StyleSheet.create({
     backgroundColor: "green",
   },
 });
+export const allGameStyle = StyleSheet.create({
+  allGames: {
+    // flex: 20,
+    // justifyContent: "center",
+    // alignItems:"center"
+    // backgroundColor: "blue",
+  },
+  images: {
+    width: "auto",
+    height: "70%",
+    resizeMode: "cover",
+    borderRadius: 7,
+  },
+});

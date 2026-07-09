@@ -8,7 +8,7 @@ import { JSX } from "react/jsx-runtime";
 export default function TopRatedGames(): JSX.Element {
   const { data, isPending, error, isError, isLoading } = useGetListgames();
 
-  if (!data) {
+  if (!data || isLoading) {
     return (
       <View>
         <Text>Chargement... </Text>
@@ -30,7 +30,6 @@ export default function TopRatedGames(): JSX.Element {
               height: 100,
               resizeMode: "cover",
               borderRadius: 7,
-              flexDirection: "row",
             }}
           />
           <Text style={defaultStyle.title}>{games.title}</Text>

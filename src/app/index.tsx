@@ -1,3 +1,4 @@
+import AllGames from "@/components/AllGames";
 import { Home } from "@/components/Home";
 import TopRatedGames from "@/components/TopRatedGames";
 import { View } from "react-native";
@@ -8,6 +9,7 @@ export default function Index() {
     <View style={styles.container}>
       <Home />
       <TopRatedGames />
+      {/* <AllGames /> */}
     </View>
   );
 }
