@@ -5,7 +5,7 @@ import { MostRaking } from "./MostRacking";
 
 export function Home(): JSX.Element {
   return (
-    <View>
+    <View style={{backgroundColor:"yellow"}}>
       <MostRaking />
       <InputText placeholder="chercher un jeu" />
     </View>

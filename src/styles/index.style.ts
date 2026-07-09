@@ -17,6 +17,7 @@ export const styleMonstRaking = StyleSheet.create({
     // marginBottom: 50,
     // padding: 20,
     width: "100%",
+    backgroundColor: "red",
   },
 });
 export const defaultStyle = StyleSheet.create({
@@ -45,5 +46,15 @@ export const defaultStyle = StyleSheet.create({
     borderColor: "white",
     borderRadius: 9,
     color: "white",
+  },
+});
+export const topRatedGames = StyleSheet.create({
+  TopRatedGames: {
+    flex: 5,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: 15,
+    backgroundColor: "green",
   },
 });
