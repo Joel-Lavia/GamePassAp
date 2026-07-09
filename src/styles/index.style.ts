@@ -53,7 +53,6 @@ export const topRatedGames = StyleSheet.create({
     flex: 5,
     flexDirection: "row",
     justifyContent: "center",
-    alignItems: "center",
     gap: 15,
     backgroundColor: "green",
   },
