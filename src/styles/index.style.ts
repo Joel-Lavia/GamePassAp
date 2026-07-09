@@ -37,11 +37,13 @@ export const defaultStyle = StyleSheet.create({
     flexWrap: "wrap",
     // alignItems: "center",
   },
-  iconContainer: {
-    backgroundColor: "yellow", // Couleur de l'arrière-plan
-    padding: 6, // Espace entre l'icône et le bord du fond
-    borderRadius: 50, // Rend le fond parfaitement rond
-    alignItems: "center", // Centre l'icône horizontalement
-    justifyContent: "center", // Centre l'icône verticalement
+  inputText: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+    borderColor: "white",
+    borderRadius: 9,
+    color: "white",
   },
 });

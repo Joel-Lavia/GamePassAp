@@ -1,5 +1,5 @@
 import { useGetListgames } from "@/hooks/useGetListGame";
-import StarsIcone from "@/icons/icons";
+import { StarsIcone } from "@/icons/icons";
 import { defaultStyle, styleMonstRaking } from "@/styles/index.style";
 import { Image, Text, View } from "react-native";
 import { JSX } from "react/jsx-runtime";
