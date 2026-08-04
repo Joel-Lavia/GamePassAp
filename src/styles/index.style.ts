@@ -65,8 +65,10 @@ export const allGameStyle = StyleSheet.create({
     // backgroundColor: "blue",
   },
   images: {
-    width: "auto",
-    height: "70%",
+    // width: "auto",
+    // height: "70%",
+    width: "100%",
+    height: 200,
     resizeMode: "cover",
     borderRadius: 7,
   },

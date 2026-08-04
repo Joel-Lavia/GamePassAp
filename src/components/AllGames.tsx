@@ -1,30 +1,45 @@
 import { useGetListgames } from "@/hooks/useGetListGame";
 import { StarsIcone } from "@/icons/icons";
 import { allGameStyle, defaultStyle } from "@/styles/index.style";
-import { Image, ScrollView, Text, View } from "react-native";
+import { FlatList, Image, Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { JSX } from "react/jsx-runtime";
 
-export default function AllGames(): JSX.Element {
-  const { data, isLoading, isEnabled } = useGetListgames();
+function listGames({ item }: { item: any }) {
+  const games = item;
   return (
-    <ScrollView style={allGameStyle.allGames}>
-      {data?.map((games) => (
-        <View
-          key={games.id}
-          style={{ backgroundColor: "red", borderRadius: 7, width: "100%" }}
-        >
-          <Image source={{ uri: games.imageUrl }} style={allGameStyle.images} />
-
-          <View>
-            <Text style={defaultStyle.title}>{games.title}</Text>
-            <Text style={defaultStyle.text}>{games.description}</Text>
-            <View style={defaultStyle.flex}>
-              <StarsIcone />
-              <Text style={defaultStyle.raking}>{games.rating}/100</Text>
-            </View>
+    <View style={allGameStyle.allGames}>
+      <View>
+        <Image source={{ uri: games.imageUrl }} style={allGameStyle.images} />
+        <View>
+          <Text style={defaultStyle.title}>{games.title}</Text>
+          <Text style={defaultStyle.text}>{games.description}</Text>
+          <View style={defaultStyle.flex}>
+            <StarsIcone />
+            <Text style={defaultStyle.raking}>{games.rating}/100</Text>
           </View>
         </View>
-      ))}
-    </ScrollView>
+      </View>
+    </View>
+  );
+}
+export default function AllGames(): JSX.Element {
+  const { data, isLoading, isEnabled } = useGetListgames();
+  if (isLoading) {
+    return (
+      <View>
+        <Text>Chargement des données ...</Text>
+      </View>
+    );
+  }
+
+  return (
+    <SafeAreaView style={{ flex: 10 }}>
+      <FlatList
+        data={data}
+        renderItem={listGames}
+        keyExtractor={(games) => games.id.toString()}
+      />
+    </SafeAreaView>
   );
 }

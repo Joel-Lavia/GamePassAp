@@ -9,7 +9,7 @@ export default function Index() {
     <View style={styles.container}>
       <Home />
       <TopRatedGames />
-      {/* <AllGames /> */}
+      <AllGames />
     </View>
   );
 }
