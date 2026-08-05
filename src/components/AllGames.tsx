@@ -1,7 +1,8 @@
 import { useGetListgames } from "@/hooks/useGetListGame";
 import { StarsIcone } from "@/icons/icons";
 import { allGameStyle, defaultStyle } from "@/styles/index.style";
-import { FlatList, Image, Text, View } from "react-native";
+import { router } from "expo-router";
+import { Button, FlatList, Image, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { JSX } from "react/jsx-runtime";
 
@@ -17,7 +18,12 @@ function listGames({ item }: { item: any }) {
           <Text style={defaultStyle.text}>{games.description}</Text>
           <View style={defaultStyle.flex}>
             <StarsIcone />
-            <Text style={defaultStyle.raking}>{games.rating}/100</Text>
+            <Text style={defaultStyle.raking}>{games.raking}/100</Text>
+            <Button
+              onPress={() => router.push(`/details/${games.id}`)}
+              title="Voir"
+              color="#841584"
+            />
           </View>
         </View>
       </View>
