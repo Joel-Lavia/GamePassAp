@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GameVault Mockup</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Inter,Arial,sans-serif;
+background:#0b1020;
+color:#fff;
+padding:40px;
+}
+h1{margin-bottom:30px;text-align:center}
+.grid{
+display:flex;
+flex-wrap:wrap;
+gap:30px;
+justify-content:center;
+}
+.phone{
+width:390px;
+background:#111827;
+border-radius:36px;
+overflow:hidden;
+box-shadow:0 20px 60px rgba(0,0,0,.5);
+border:1px solid #1f2937;
+}
+.header{
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+.hero{
+height:220px;
+background:url('https://picsum.photos/800/500') center/cover;
+position:relative;
+}
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:linear-gradient(to top,#111827,transparent);
+}
+.hero-content{
+position:absolute;
+bottom:20px;
+left:20px;
+z-index:2;
+}
+.section{padding:20px}
+.section h3{margin-bottom:15px}
+.row{
+display:flex;
+gap:12px;
+overflow:hidden;
+}
+.game-mini{
+width:110px;
+}
+.game-mini img{
+width:100%;
+height:140px;
+object-fit:cover;
+border-radius:14px;
+}
+.card{
+background:#1f2937;
+border-radius:18px;
+overflow:hidden;
+margin-bottom:16px;
+}
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+.card-body{padding:15px}
+.badge{
+display:inline-block;
+padding:4px 10px;
+border-radius:999px;
+background:#4f46e5;
+font-size:12px;
+margin-bottom:8px;
+}
+.rating{color:#fbbf24;font-weight:bold}
+.actions{
+display:flex;
+gap:8px;
+margin-top:12px;
+}
+.btn{
+flex:1;
+padding:10px;
+border:none;
+border-radius:10px;
+color:#fff;
+cursor:pointer;
+}
+.view{background:#4f46e5}
+.edit{background:#f59e0b}
+.delete{background:#ef4444}
+.search{
+width:100%;
+padding:12px;
+border-radius:12px;
+border:none;
+background:#1f2937;
+color:#fff;
+margin-bottom:16px;
+}
+.detail-banner{
+height:260px;
+background:url('https://picsum.photos/700/500') center/cover;
+}
+.content{padding:20px}
+.form-group{margin-bottom:16px}
+input,textarea{
+width:100%;
+padding:12px;
+border-radius:12px;
+border:none;
+background:#1f2937;
+color:white;
+}
+textarea{height:120px}
+.preview{
+height:180px;
+background:url('https://picsum.photos/600/400') center/cover;
+border-radius:16px;
+margin-top:10px;
+}
+.modal-wrap{
+padding:40px;
+background:rgba(0,0,0,.25);
+}
+.modal{
+background:#1f2937;
+padding:20px;
+border-radius:20px;
+}
+.small{color:#9ca3af;font-size:14px}
+</style>
+</head>
+<body>
+
+<h1>🎮 GameVault - Netflix Gaming UI Mockup</h1>
+
+<div class="grid">
+
+<div class="phone">
+<div class="hero">
+<div class="hero-content">
+<h2>GTA V</h2>
+<p>Open World • Action</p>
+<p class="rating">⭐ 98/100</p>
+</div>
+</div>
+
+<div class="section">
+<input class="search" placeholder="🔍 Rechercher un jeu">
+<h3>Top Rated Games</h3>
+
+<div class="row">
+<div class="game-mini">
+<img src="https://picsum.photos/200/300?1">
+<p>GTA V</p>
+<p class="rating">⭐98</p>
+</div>
+<div class="game-mini">
+<img src="https://picsum.photos/200/300?2">
+<p>Cyberpunk</p>
+<p class="rating">⭐85</p>
+</div>
+<div class="game-mini">
+<img src="https://picsum.photos/200/300?3">
+<p>RDR 2</p>
+<p class="rating">⭐76</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h3>All Games</h3>
+
+<div class="card">
+<img src="https://picsum.photos/600/400?11">
+<div class="card-body">
+<span class="badge">Action</span>
+<h4>GTA V</h4>
+<p class="small">Open world experience</p>
+<p class="rating">⭐ 54/100</p>
+<div class="actions">
+<button class="btn view">Voir</button>
+<button class="btn edit">Modifier</button>
+<button class="btn delete">Supprimer</button>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="phone">
+<div class="detail-banner"></div>
+<div class="content">
+<h2>GTA V</h2>
+<p class="rating">⭐ 54/100</p>
+<br>
+<p>
+Explore Los Santos in one of the most iconic open-world games.
+</p>
+<br>
+<p class="small">ID : 2</p>
+<p class="small">Créé : 2026</p>
+<p class="small">Mis à jour : 2026</p>
+
+<div class="actions" style="margin-top:20px">
+<button class="btn edit">Modifier</button>
+<button class="btn delete">Supprimer</button>
+</div>
+</div>
+</div>
+
+<div class="phone">
+<div class="header">
+<h3>➕ Ajouter un jeu</h3>
+</div>
+
+<div class="content">
+<div class="form-group">
+<input placeholder="Titre du jeu">
+</div>
+
+<div class="form-group">
+<textarea placeholder="Description"></textarea>
+</div>
+
+<div class="form-group">
+<input placeholder="URL image">
+<div class="preview"></div>
+</div>
+
+<div class="form-group">
+<input type="number" placeholder="Note">
+</div>
+
+<div class="actions">
+<button class="btn delete">Annuler</button>
+<button class="btn view">Créer</button>
+</div>
+</div>
+</div>
+
+<div class="phone">
+<div class="header">
+<h3>✏️ Modifier un jeu</h3>
+</div>
+
+<div class="content">
+<div class="form-group">
+<input value="GTA V">
+</div>
+
+<div class="form-group">
+<textarea>Open world experience</textarea>
+</div>
+
+<div class="preview"></div>
+
+<div class="form-group" style="margin-top:16px">
+<input value="54">
+</div>
+
+<div class="actions">
+<button class="btn delete">Annuler</button>
+<button class="btn edit">Enregistrer</button>
+</div>
+</div>
+</div>
+
+<div class="phone">
+<div class="modal-wrap">
+<div class="modal">
+<h3>🗑 Supprimer ce jeu ?</h3>
+<br>
+<p class="small">
+Cette action est irréversible.
+</p>
+<br>
+<div class="actions">
+<button class="btn view">Annuler</button>
+<button class="btn delete">Supprimer</button>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+</body>
+</html>

@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#0c0a28",
+    backgroundColor: "#0b1020",
     // alignItems: "center",
     // justifyContent: "center",
   },
@@ -59,10 +59,13 @@ export const topRatedGames = StyleSheet.create({
 });
 export const allGameStyle = StyleSheet.create({
   allGames: {
-    // flex: 20,
+    // flex:1,
     // justifyContent: "center",
     // alignItems:"center"
-    // backgroundColor: "blue",
+    // flexDirection: "row",
+    // backgroundColor: "#808080",
+    justifyContent: "space-between",
+    padding: 8,
   },
   images: {
     // width: "auto",
@@ -70,6 +73,10 @@ export const allGameStyle = StyleSheet.create({
     width: "100%",
     height: 200,
     resizeMode: "cover",
+    borderRadius: 7,
+  },
+  backround: {
+    backgroundColor: "#242f46",
     borderRadius: 7,
   },
 });

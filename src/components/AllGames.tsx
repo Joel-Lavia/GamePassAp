@@ -9,7 +9,8 @@ function listGames({ item }: { item: any }) {
   const games = item;
   return (
     <View style={allGameStyle.allGames}>
-      <View>
+      {/* <Text>Test</Text> */}
+      <View style={allGameStyle.backround}>
         <Image source={{ uri: games.imageUrl }} style={allGameStyle.images} />
         <View>
           <Text style={defaultStyle.title}>{games.title}</Text>
