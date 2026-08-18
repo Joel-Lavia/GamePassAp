@@ -36,7 +36,7 @@ export const defaultStyle = StyleSheet.create({
   flex: {
     flexDirection: "row",
     flexWrap: "wrap",
-    // alignItems: "center",
+    alignItems: "center",
   },
   inputText: {
     height: 40,
@@ -78,5 +78,14 @@ export const allGameStyle = StyleSheet.create({
   backround: {
     backgroundColor: "#242f46",
     borderRadius: 7,
+  },
+});
+export const bouttonContent = StyleSheet.create({
+  buttonContainer: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 10, // optionnel : espacement entre les boutons
   },
 });
