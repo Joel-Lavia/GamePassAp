@@ -1,8 +1,12 @@
 import { useDetailsGames } from "@/hooks/DetailGames";
 import { StarsIcone } from "@/icons/icons";
-import { allGameStyle, defaultStyle } from "@/styles/index.style";
+import {
+  allGameStyle,
+  bouttonContent,
+  defaultStyle,
+} from "@/styles/index.style";
 import { useLocalSearchParams, useRouter } from "expo-router";
-import { Button, Image, Text, View } from "react-native";
+import { Button, Image, Pressable, Text, View } from "react-native";
 import { JSX } from "react/jsx-runtime";
 
 export default function DetailsScreen(): JSX.Element {
@@ -12,6 +16,7 @@ export default function DetailsScreen(): JSX.Element {
 
   return (
     <View>
+      <Button title="retour" onPress={() => router.back()} />
       <Image source={{ uri: data?.imageUrl }} style={allGameStyle.images} />
       <Text style={defaultStyle.title}>{data?.title}</Text>
       <View style={defaultStyle.flex}>
@@ -34,7 +39,30 @@ export default function DetailsScreen(): JSX.Element {
         <Button title="Modifier" onPress={() => router.back()} />
         <Button title="Supprimer" onPress={() => router.back()} />
       </View> */}
-      <Button title="retour" onPress={() => router.back()} />
+      {/*=============Bouton====================*/}
+      <View style={bouttonContent.buttonContainer}>
+        <Pressable
+          onPress={() => router.push(`/details/${data?.id}`)}
+          style={{
+            backgroundColor: "#d8ea00",
+            padding: 10,
+            borderRadius: 7,
+          }}
+        >
+          <Text style={{ color: "white" }}>Modifier</Text>
+        </Pressable>
+        <Pressable
+          onPress={() => router.push(`/details/${data?.id}`)}
+          style={{
+            backgroundColor: "#db0000",
+            padding: 10,
+            borderRadius: 7,
+          }}
+        >
+          <Text style={{ color: "white" }}>Supprimer</Text>
+        </Pressable>
+        {/*=============Bouton====================*/}
+      </View>
     </View>
   );
 }
