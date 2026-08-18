@@ -23,7 +23,8 @@ export const styleMonstRaking = StyleSheet.create({
 export const defaultStyle = StyleSheet.create({
   text: {
     color: "#FFFFFF",
-    fontSize: 12,
+    fontSize: 15,
+    fontWeight: "bold",
   },
   title: {
     color: "#FFFFFF",

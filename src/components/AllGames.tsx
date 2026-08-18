@@ -56,6 +56,7 @@ function listGames({ item }: { item: any }) {
             >
               <Text style={{ color: "white" }}>Supprimer</Text>
             </Pressable>
+            {/*=============Bouton====================*/}
           </View>
         </View>
       </View>
