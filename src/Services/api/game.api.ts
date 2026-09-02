@@ -11,11 +11,11 @@ export async function gameDetail(id: string): Promise<gameInterface> {
 }
 export async function updateGame(
   id: string,
-  data: FormData,
+  data: Omit<gameInterface, "id" | "createdAt" | "updatedAt">,
 ): Promise<gameInterface> {
   const game = await api.put(`${id}`, data, {
     headers: {
-      "Content-Type": "multipart/form-data",
+      "Content-Type": "application/json",
     },
   });
   return game.data;
