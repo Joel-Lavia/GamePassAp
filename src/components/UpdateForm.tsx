@@ -50,9 +50,30 @@ export default function UpdateForm({ id }: { id: string }): JSX.Element {
             style={styleTextInput.input}
             value={field.state.value}
             onChangeText={(value) => field.handleChange(value)}
+            placeholder="Titre"
+            placeholderTextColor="#ffffff"
           />
         )}
       />
+      {/*Titre du jeu*/}
+      <form.Field
+        name="description"
+        children={(field) => (
+          <TextInput
+            style={[
+              styleTextInput.input,
+              { height: 100, textAlignVertical: "top" },
+            ]}
+            value={field.state.value}
+            onChangeText={(value) => field.handleChange(value)}
+            multiline={true}
+            // numberOfLines={4}
+            placeholder="Description"
+            placeholderTextColor="#ffffff"
+          />
+        )}
+      />
+
       {/*Bouton de soumission*/}
       <form.Subscribe
         selector={(state) => state.canSubmit}
