@@ -8,6 +8,15 @@ import { JSX } from "react/jsx-runtime";
 export default function UpdateForm({ id }: { id: string }): JSX.Element {
   const { data: gameData, isLoading, isPending, isError } = useDetailsGames(id);
 
+  const parsing = (data: string, min = 0, max = 100): number => {
+    if (data === "") return min;
+    const num = Number(data);
+    if (isNaN(num)) return min;
+    return Math.max(min, Math.min(max, num));
+  };
+
+  // Utilisation
+
   const update = useUpdateGame(id);
   const form = useForm({
     defaultValues: {
@@ -39,6 +48,7 @@ export default function UpdateForm({ id }: { id: string }): JSX.Element {
       </View>
     );
   }
+
   return (
     <View>
       <Text style={defaultStyle.title}>Modifier un jeu</Text>
@@ -69,6 +79,34 @@ export default function UpdateForm({ id }: { id: string }): JSX.Element {
             multiline={true}
             // numberOfLines={4}
             placeholder="Description"
+            placeholderTextColor="#ffffff"
+          />
+        )}
+      />
+      {/*Image url*/}
+      <form.Field
+        name="imageUrl"
+        children={(field) => (
+          <TextInput
+            style={styleTextInput.input}
+            value={field.state.value}
+            onChangeText={(value) => field.handleChange(value)}
+            placeholder="Image url"
+            placeholderTextColor="#ffffff"
+          />
+        )}
+      />
+
+      {/*Note*/}
+      <form.Field
+        name="rating"
+        children={(field) => (
+          <TextInput
+            style={styleTextInput.input}
+            value={field.state.value.toString()}
+            keyboardType="numeric"
+            onChangeText={(value) => field.handleChange(parsing(value, 0, 100))}
+            placeholder="Note"
             placeholderTextColor="#ffffff"
           />
         )}
