@@ -90,3 +90,14 @@ export const bouttonContent = StyleSheet.create({
     gap: 10, // optionnel : espacement entre les boutons
   },
 });
+export const styleTextInput = StyleSheet.create({
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+    borderColor: "white",
+    borderRadius: 9,
+    color: "white",
+  },
+});

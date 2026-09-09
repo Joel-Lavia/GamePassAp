@@ -37,7 +37,7 @@ function listGames({ item }: { item: any }) {
               <Text style={{ color: "white" }}>Voir</Text>
             </Pressable>
             <Pressable
-              onPress={() => router.push(`/details/${games.id}`)}
+              onPress={() => router.push(`/modifier/${games.id}`)}
               style={{
                 backgroundColor: "#d8ea00",
                 padding: 10,
